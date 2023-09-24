@@ -1,3 +1,4 @@
+/* CSS cho thanh điều hướng */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 }
 
 .navbar {
+    font-weight: 1000;
     background: linear-gradient(to right, #4F8EF7, #3A5FCD);
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,11 @@
     border-radius: 5px;
 }
 
+.navbar-items {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-items a {
     color: white;
     text-decoration: none;
@@ -37,25 +44,60 @@
     color: white;
     border: none;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .navbar-items .join {
+    font-weight: 1000;
     margin-right: 10px;
-    border-radius: 5px;
 }
 
 .navbar-items .login {
+    font-weight: 1000;
     margin-right: 20px;
-    border-radius: 5px;
 }
 
-.navbar-items .join:hover {
-    background-color: white;
-    color: black;
-
-}
-
+.navbar-items .join:hover,
 .navbar-items .login:hover {
     background-color: white;
     color: black;
+}
+
+/* CSS cho menu di động */
+.menu-icon {
+    display: none;
+    /* Ẩn nút menu trên các kích thước lớn hơn */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Sử dụng media queries để xác định phản hồi của thanh điều hướng */
+@media screen and (max-width: 768px) {
+    .navbar-items {
+        display: none;
+        /* Ẩn menu trên các kích thước nhỏ hơn */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .navbar-items.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
 }
