@@ -83,6 +83,8 @@
     .navbar-items {
         display: none;
         /* Ẩn menu trên các kích thước nhỏ hơn */
+        margin-top: 60px;
+        text-align: center;
         flex-direction: column;
         position: absolute;
         top: 60px;
