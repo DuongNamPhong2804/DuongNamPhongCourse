@@ -61,6 +61,7 @@
 .navbar-items .login:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 /* CSS cho menu di động */
