@@ -17,11 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .loader>div {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 5px solid rgb(45, 45, 216);
   border-top-color: transparent;
@@ -30,8 +31,9 @@
 
 .loader img {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
 }
 
 @keyframes spin {
@@ -148,16 +150,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.test {
-  margin-top: 100px;
-}
-
 .banner {
   background: linear-gradient(to right, purple, pink);
   color: white;
   padding: 50px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .banner h1 {
@@ -242,19 +240,19 @@ body {
 }
 
 
-.logo {
+.logof {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.logo img {
+.logof img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
 
-.logo h2 {
+.logof h2 {
   font-size: 24px;
   margin: 0;
 }
