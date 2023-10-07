@@ -1,106 +1,206 @@
 /* CSS cho thanh điều hướng */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
 }
 
 .navbar {
-    font-weight: 1000;
-    background: linear-gradient(to right, #4F8EF7, #3A5FCD);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  font-weight: 1000;
+  background: linear-gradient(to right, #4F8EF7, #3A5FCD);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
 
 .logo a {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .logo img {
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
 }
 
 .navbar-items {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-items a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .navbar-items button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .navbar-items .join {
-    font-weight: 1000;
-    margin-right: 10px;
+  font-weight: 1000;
+  margin-right: 10px;
 }
 
 .navbar-items .login {
-    font-weight: 1000;
-    margin-right: 20px;
+  font-weight: 1000;
+  margin-right: 20px;
 }
 
 .navbar-items .join:hover,
 .navbar-items .login:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 /* CSS cho menu di động */
 .menu-icon {
-    display: none;
-    /* Ẩn nút menu trên các kích thước lớn hơn */
-    flex-direction: column;
-    cursor: pointer;
+  display: none;
+  /* Ẩn nút menu trên các kích thước lớn hơn */
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .menu-icon span {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
 }
 
 /* Sử dụng media queries để xác định phản hồi của thanh điều hướng */
 @media screen and (max-width: 768px) {
-    .navbar-items {
-        display: none;
-        /* Ẩn menu trên các kích thước nhỏ hơn */
-        margin-top: 60px;
-        text-align: center;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #333;
-        text-align: center;
-        z-index: 1;
-    }
+  .navbar-items {
+    display: none;
+    /* Ẩn menu trên các kích thước nhỏ hơn */
+    margin-top: 60px;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    text-align: center;
+    z-index: 1;
+  }
 
-    .navbar-items.active {
-        display: flex;
-    }
+  .navbar-items.active {
+    display: flex;
+  }
 
-    .menu-icon {
-        display: flex;
-    }
+  .menu-icon {
+    display: flex;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.test{
+  margin-top: 100px;
+}
+
+.banner {
+  background: linear-gradient(to right, purple, pink);
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.banner h1 {
+  font-size: 2.5em;
+}
+
+.banner p {
+  font-size: 1.2em;
+}
+
+.banner button {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: purple;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card i {
+  font-size: 24px;
+  color: purple;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.courses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-card {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+  width: 100%;
+}
+
+.course-card h2 {
+  font-size: 20px;
+}
+
+.course-card p {
+  font-size: 16px;
+}
+
+.course-card .rating {
+  color: gold;
+}
+
+.course-card .price {
+  color: green;
+}
+
+.course-card button {
+  background-color: blue;
+  color: white;
 }
